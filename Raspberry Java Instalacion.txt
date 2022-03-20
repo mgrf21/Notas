@@ -1,0 +1,39 @@
+ 1 .-  Comprobar la version del JDK en la Raspberry pi con el comando 
+               java - -verslon 
+ 
+ 2.-  Si no sale ningun JDK Instalado ejecutar el siguiente comando
+                
+                sudo apt install default-jdk 
+ 
+               -Opcional Instalar Visual Studio Code en Raspberry Pi 
+                           sudo apt-install code
+                           Instalar Extension Pack for Java 
+                           Descargar JDK Ctrl+Shift+P
+                                                 Java: Configure Java Runtime 
+                                                 Descargar 
+ 
+              -Opcional. Instalar OpenJDK8
+              sudo apt-get install openjdk-8-jre 
+
+              -Opcional. Descargar e instalar manualmente 
+               https://jdk.java.net/java-se-ri/ll 
+ 
+              -Opcional. En caso de tener mas de un JDK
+               sudo update-alternatives -- install [url en el path] [nombre del programa] [url del programa) [prioridad] 
+               sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk8u392-b98/bin/java 1615
+               sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk8u392-b98/bin/javac 1615
+
+              -Opcional. Seleccionar la opcion de JDK a usar 
+               sudo update-alternatives - -config java
+ 
+ 3.-  Configurar JAVA HOME
+ 
+               sudo nano —/.bashrc 
+ 
+               Agregar al final
+               export JAVA HOME=/usr/1ib/jvm/jdk-11.9. 12+7 
+               export PATH=$JAVA HOME:$PATH
+  
+               Reiniciar Maquina Virtual
+               echo $JAVA HOME
+
